@@ -62,7 +62,7 @@ module Tire
           results = Array(ids).inject([]) do |collector, id|
             if the_filter.nil? || id[:index] == the_filter
               collector << {_index: id[:index], _type: id[:type], _id: id[:id], _score: 1.0, _source: ids_to_json[id[:id]]}
-            else 
+            else
               collector
             end
           end
@@ -83,7 +83,8 @@ module Tire
         end
 
         def self.log(text)
-          logger.call text
+          puts "text"
+          #logger.call text
         end
 
         private
